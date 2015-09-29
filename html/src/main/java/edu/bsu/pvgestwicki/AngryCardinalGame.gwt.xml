@@ -1,6 +1,7 @@
 <module rename-to='angrycardinal'>
     <inherits name='playn.Scene'/>
     <inherits name='AngryCardinalGameAssets'/>
+    <inherits name="tripleplay.TriplePlay"/>
 
     <source path='core'/>
     <source path='html'/>
