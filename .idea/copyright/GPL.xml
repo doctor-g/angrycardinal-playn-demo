@@ -1,0 +1,6 @@
+<component name="CopyrightManager">
+  <copyright>
+    <option name="myName" value="GPL" />
+    <option name="notice" value="This file is part of &amp;#36;project.name&#10;&#10;&amp;#36;project.name is free software: you can redistribute it &#10;and/or modify it under the terms of the GNU General Public License &#10;as published by the Free Software Foundation, either version 3 of &#10;the License, or (at your option) any later version.&#10;&#10;&amp;#36;project.name is distributed in the hope that it will &#10;be useful, but WITHOUT ANY WARRANTY; without even the implied warranty&#10;of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the&#10;GNU General Public License for more details.&#10;&#10;You should have received a copy of the GNU General Public License&#10;along with &amp;#36;project.name.  If not, see&#10;&lt;http://www.gnu.org/licenses/&gt;.&#10;  &#10;Copyright &amp;#36;file.lastModified.year Paul Gestwicki" />
+  </copyright>
+</component>
