@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/angrycardinal.iml" filepath="$PROJECT_DIR$/angrycardinal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/assets/angrycardinal-assets.iml" filepath="$PROJECT_DIR$/assets/angrycardinal-assets.iml" />
+      <module fileurl="file://$PROJECT_DIR$/core/angrycardinal-core.iml" filepath="$PROJECT_DIR$/core/angrycardinal-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/html/angrycardinal-html.iml" filepath="$PROJECT_DIR$/html/angrycardinal-html.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/angrycardinal-java.iml" filepath="$PROJECT_DIR$/java/angrycardinal-java.iml" />
+    </modules>
+  </component>
+</project>
