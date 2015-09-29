@@ -39,7 +39,7 @@ public class AngryCardinalGame extends SceneGame {
     }
 
     private void initCharlie() {
-        Image charlieImage = plat.assets().getImageSync("images/charlie.png");
+        Image charlieImage = plat.assets().getImage("images/charlie.png");
         charlieLayer = new ImageLayer(charlieImage);
         charlieLayer.setOrigin(Layer.Origin.LL);
         charlieLayer.setTy(plat.graphics().viewSize.height());
