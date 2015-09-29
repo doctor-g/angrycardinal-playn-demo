@@ -12,6 +12,6 @@ public class AngryCardinalGame extends SceneGame {
         super(plat, 33);
         AngryCardinalGame.game = this;
         ScreenStack screens = new ScreenStack(this, rootLayer);
-        screens.push(new PlayingScreen());
+        screens.push(new TitleScreen(screens));
     }
 }
