@@ -1,11 +1,13 @@
 package edu.bsu.pvgestwicki.core;
 
 import playn.core.*;
+import playn.scene.CanvasLayer;
 import playn.scene.ImageLayer;
 import playn.scene.Layer;
 import pythagoras.f.Vector;
 import react.Slot;
 import react.Value;
+import react.ValueView;
 import tripleplay.game.ScreenStack;
 import tripleplay.ui.*;
 import tripleplay.ui.layout.AxisLayout;
@@ -47,6 +49,7 @@ public class PlayingScreen extends ScreenStack.UIScreen {
         });
         game().update.connect(new Slot<Clock>() {
             private final Vector change = new Vector(0, 0);
+
             @Override
             public void onEmit(Clock clock) {
                 if (isCharlieMoving) {
@@ -58,6 +61,43 @@ public class PlayingScreen extends ScreenStack.UIScreen {
                     charlieLayer.setTy(charlieLayer.ty() + change.y);
                     score.update(score.get() + (int) change.length());
                 }
+            }
+        });
+        score.connect(new ValueView.Listener<Integer>() {
+            @Override
+            public void onChange(Integer value, Integer oldValue) {
+                if (isDivisibleBy50(value)) {
+                    showCheerMessage();
+                }
+            }
+
+            private boolean isDivisibleBy50(int value) {
+                return value % 50 == 0;
+            }
+
+            private void showCheerMessage() {
+                final Layer messageLayer = createMessageLayer();
+                layer.addAt(messageLayer, size().width(), size().height() / 2);
+                iface.anim.tweenX(messageLayer)
+                        .to(-messageLayer.width())
+                        .in(2000)
+                        .then()
+                        .action(new Runnable() {
+                            @Override
+                            public void run() {
+                                layer.remove(messageLayer);
+                            }
+                        });
+            }
+
+            private Layer createMessageLayer() {
+                final float scale = 2;
+                TextLayout textLayout = graphics().layoutText("Hooray!", new TextFormat());
+                Canvas canvas = graphics().createCanvas(textLayout.size.width() * scale,
+                        textLayout.size.height() * scale);
+                canvas.scale(2, 2);
+                canvas.fillText(textLayout, 0, 0);
+                return new CanvasLayer(graphics(), canvas);
             }
         });
     }
