@@ -2,7 +2,9 @@
 This is a demonstration of the [PlayN](http://playn.io) game programming library. 
 It is designed to show some of the interesting features of PlayN, particularly
 for the purpose of teaching game programming to undergraduate Computer Science
-students. This is a technology demo, not a complete or playable game.
+students. This is a technology demo, not a complete or playable game. Note that
+while PlayN supports many platforms, this demo is limited to the Java and
+HTML5 platforms.
 
 The demonstration was originally designed for the [Consortium of Computing
 Sciences in Colleges Midwest](http://ccsc.org/midwest) 2015 Conference.
